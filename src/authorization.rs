@@ -30,6 +30,9 @@ static USER_DB: Lazy<HashMap<String, User>> = Lazy::new(|| {
     let user_db: HashMap<String, User> = HashMap::from([
         (String::from("walter"), User { client_id: String::from("walter"), client_secret: String::from("verysecurepw"), org: String::from("erste") }),
         (String::from("karl"), User { client_id: String::from("karl"), client_secret: String::from("verysecurepw"), org: String::from("rbi") }),
+        (String::from("paul"), User { client_id: String::from("paul"), client_secret: String::from("verysecurepw"), org: String::from("oenb") }),
+        (String::from("roman"), User { client_id: String::from("paul"), client_secret: String::from("verysecurepw"), org: String::from("erste") }),
+        (String::from("johannes"), User { client_id: String::from("johannes"), client_secret: String::from("verysecurepw"), org: String::from("oenb") }),
     ]);
 
     user_db

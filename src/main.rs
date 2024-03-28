@@ -3,8 +3,7 @@ extern crate core;
 use std::str::FromStr;
 use std::time::Duration;
 use axum::Router;
-use axum::routing::method_routing::post;
-use serde::{Deserialize, Serialize};
+use axum::routing::post;
 use sqlx::{Pool, Sqlite};
 use sqlx::sqlite::{SqliteConnectOptions, SqliteJournalMode, SqlitePoolOptions, SqliteSynchronous};
 use tracing::info;
@@ -59,6 +58,7 @@ fn router(state: AppState) -> Router {
     Router::new()
         .route("/bdf/api/authorize", post(authorization::authorize))
         .route("/bdf/api/message1", post(api::message1))
+        .route("/bdf/api/message2", post(api::message2))
         .with_state(state)
         // .layer(prepare_middleware())
 }
