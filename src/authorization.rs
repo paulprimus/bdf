@@ -33,6 +33,7 @@ static USER_DB: Lazy<HashMap<String, User>> = Lazy::new(|| {
         (String::from("paul"), User { client_id: String::from("paul"), client_secret: String::from("verysecurepw"), org: String::from("oenb") }),
         (String::from("roman"), User { client_id: String::from("paul"), client_secret: String::from("verysecurepw"), org: String::from("erste") }),
         (String::from("johannes"), User { client_id: String::from("johannes"), client_secret: String::from("verysecurepw"), org: String::from("oenb") }),
+        (String::from("oenb@delphi.eu"), User { client_id: String::from("oenb@delphi.eu"), client_secret: String::from("verysecurepw"), org: String::from("oenb") }),
     ]);
 
     user_db
